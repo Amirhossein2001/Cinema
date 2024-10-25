@@ -29,4 +29,5 @@
   
   body {
     overflow-x: hidden; /* Prevents horizontal scroll */
+    font-family: 'Roboto', sans-serif; /* Applying the font */
 }

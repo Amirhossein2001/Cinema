@@ -7,16 +7,14 @@
     <title>Cinema Booking App</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-    <style>
-        body {
-            overflow-x: hidden; /* Prevents horizontal scroll */
-        }
-    </style>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body class="bg-black text-gray-900">
 
-    <div class=" mx-auto max-w-full p-4 md:p-6">
+    <div class="mx-auto max-w-full p-4 md:p-6">
         <!-- Room Management -->
         <div id="roomManagement" class="mb-6 flex flex-col items-center">
             <h2 class="text-2xl font-bold mb-4 text-center">Manage Cinema Rooms</h2>
@@ -52,6 +50,7 @@
             <div id="seatsGrid" class="grid grid-cols-5 md:grid-cols-10 gap-2">
                 <!-- Seats will be dynamically added here -->
             </div>
+            <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-150" onclick="goBack()">Back</button>
         </div>
     </div>
 
