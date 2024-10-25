@@ -257,6 +257,7 @@ function updateSeatInfo(seats) {
 }
 
 
+
 // Go Back
 function goBack() {
   selectedMovieIndex = null;
