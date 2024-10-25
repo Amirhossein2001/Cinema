@@ -27,4 +27,6 @@
     margin: 5px; /* Adjust the value as needed */
   }
   
-  
+  body {
+    overflow-x: hidden; /* Prevents horizontal scroll */
+}
