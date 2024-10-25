@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema Booking App</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css"> <!-- Link to external CSS -->
+</head>
+
+<body class="bg-black text-gray-900">
+
+    <div class="container mx-auto p-6">
+        <!-- Room Management -->
+        <div id="roomManagement" class="mb-6 flex flex-col items-center">
+            <h2 class="text-2xl font-bold mb-4 text-center">Manage Cinema Rooms</h2>
+            <div class="flex space-x-4">
+                <input type="text" id="newRoomName" placeholder="New Room Name" class="px-4 py-2 rounded bg-gray-800 text-white border border-gray-600 focus:border-green-500">
+                <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition duration-150" onclick="addRoom()">Add Room</button>
+            </div>
+            <div id="roomSelection" class="mt-4 flex flex-wrap space-x-2"></div>
+        </div>
+
+        <!-- Movie Management -->
+        <div id="movieManagement" class="hidden mb-6">
+            <h2 class="text-2xl font-bold mb-4">Manage Movies</h2>
+            <div class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4 mb-4">
+                <input type="text" id="movieTitle" placeholder="Movie Title" class="px-4 py-2 rounded bg-gray-800 text-white border border-gray-600 focus:border-green-500">
+                <input type="text" id="movieTime" placeholder="Movie Time (e.g., 12:00 PM)" class="px-4 py-2 rounded bg-gray-800 text-white border border-gray-600 focus:border-green-500">
+                <input type="text" id="movieImage" placeholder="Movie Image URL" class="px-4 py-2 rounded bg-gray-800 text-white border border-gray-600 focus:border-green-500">
+                <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition duration-150" onclick="addMovie()">Add Movie</button>
+            </div>
+            <div id="movies" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"></div>
+        </div>
+
+        <!-- Seat Map -->
+        <div id="seatMap" class="hidden">
+            <h2 class="text-2xl font-bold mb-4">Select a Seat</h2>
+            <div id="seatInfo" class="mb-4 text-white"></div> <!-- New section for seat info -->
+            <div id="seatsGrid" class="grid grid-cols-10 gap-2">
+                <!-- Seats will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js" defer></script> <!-- Link to external JS -->
+</body>
+
+</html>
