@@ -56,7 +56,7 @@ const moviesData = {
       title: "Movie 5",
       time: "05:30 PM",
       seats: Array(80).fill(false),
-      image: "assets/images/fifth-image.jpeg",
+      image: "assets/images/fifth-image.jpg",
     },
     {
       title: "Movie 6",
@@ -86,7 +86,14 @@ let selectedMovieIndex = null;
 function loadState() {
   const savedData = localStorage.getItem("cinemaBookingApp");
   if (savedData) Object.assign(moviesData, JSON.parse(savedData));
+  
   renderRooms();
+
+  // Automatically select the first room
+  const firstRoom = Object.keys(moviesData)[0];
+  if (firstRoom) {
+    selectRoom(firstRoom);
+  }
 }
 
 // Save state
@@ -112,7 +119,9 @@ function renderRooms() {
 
   Object.keys(moviesData).forEach((room) => {
     const roomButton = document.createElement("button");
-    roomButton.className = "room-btn bg-gray-500 text-white px-4 py-2 rounded mb-2";
+    roomButton.className = `room-btn px-4 py-2 rounded mb-2 ${
+      room === selectedRoom ? "bg-blue-500" : "bg-gray-500"
+    } text-white`;
     roomButton.textContent = room;
     roomButton.onclick = () => selectRoom(room);
     roomSelection.appendChild(roomButton);
@@ -124,8 +133,10 @@ function selectRoom(room) {
   selectedRoom = room;
   document.getElementById("movieManagement").classList.remove("hidden");
   document.getElementById("seatMap").classList.add("hidden"); // Hide seat map when room is selected
+  renderRooms(); // Re-render rooms to apply the selected style
   renderMovies();
 }
+
 
 // Add Movie
 function addMovie() {

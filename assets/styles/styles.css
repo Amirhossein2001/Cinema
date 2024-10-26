@@ -1,41 +1,13 @@
-/* Add this to your CSS file */
-.swiper-container {
-    width: 100%;
-    height: 100%;
-}
-
-.swiper-slide {
-    background: #1a1a1a;
-    border-radius: 10px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 10px;
-}
-
-.swiper-slide img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-/* Add this to your CSS file */
-
 .seat {
-    margin: 5px; /* Adjust the value as needed */
-  }
-  
-  body {
-    overflow-x: hidden; /* Prevents horizontal scroll */
-    font-family: 'Roboto', sans-serif; /* Applying the font */
+  margin: 5px;
 }
 
-#loadingScreen {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 50;
+body {
+  overflow-x: hidden;
+  font-family: "Roboto", sans-serif;
+}
+
+.active-room {
+  background-color: #1e40af;
+  color: white;
 }
