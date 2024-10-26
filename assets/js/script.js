@@ -167,7 +167,7 @@ function renderMovies() {
 
   moviesData[selectedRoom].forEach((movie, index) => {
     const movieCard = document.createElement("div");
-    movieCard.className = "bg-gray-800 text-white p-4 rounded cursor-pointer hover:bg-gray-600 flex flex-col";
+    movieCard.className = "relative bg-gray-800 text-white p-4 rounded cursor-pointer hover:bg-gray-600 flex flex-col";
 
     const movieImage = document.createElement("img");
     movieImage.src = movie.image;
@@ -195,13 +195,20 @@ function renderMovies() {
       deleteMovie(index);
     };
 
+    // Hover message
+    const hoverMessage = document.createElement("div");
+    hoverMessage.className = "absolute inset-0 flex items-center justify-center bg-black bg-opacity-70 text-white text-sm font-bold opacity-0 hover:opacity-100 transition-opacity duration-200 rounded";
+    hoverMessage.innerText = "Click to book a chair";
+
     movieCard.onclick = () => selectMovie(index);
     movieCard.appendChild(movieImage);
     movieCard.appendChild(movieInfo);
     movieCard.appendChild(deleteButton);
+    movieCard.appendChild(hoverMessage); // Add the hover message
     moviesDiv.appendChild(movieCard);
   });
 }
+
 
 // Delete Movie
 function deleteMovie(index) {
