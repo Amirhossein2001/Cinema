@@ -7,7 +7,7 @@ const moviesData = {
       image: "assets/images/eighth-image.jpg",
     },
     {
-      title: "Movie 2",
+      title: "Tropic Thunder",
       time: "02:30 PM",
       seats: Array(80).fill(false),
       image: "assets/images/second-movie.jpg",
@@ -27,13 +27,13 @@ const moviesData = {
   ],
   "Blue Room": [
     {
-      title: "Movie 3",
+      title: "Hang on to you nuggets",
       time: "04:30 PM",
       seats: Array(80).fill(false),
       image: "assets/images/third-movie.jpg",
     },
     {
-      title: "Movie 3",
+      title: "Terrifier",
       time: "04:30 PM",
       seats: Array(80).fill(false),
       image: "assets/images/sixth-image.jpg",
@@ -56,7 +56,7 @@ const moviesData = {
       title: "Movie 5",
       time: "05:30 PM",
       seats: Array(80).fill(false),
-      image: "assets/images/fifth-image.jpg",
+      image: "assets/images/fourth-image.jpeg",
     },
     {
       title: "Movie 6",
