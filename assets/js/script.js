@@ -188,7 +188,7 @@ function renderMovies() {
     `;
 
     const deleteButton = document.createElement("button");
-    deleteButton.className = "ml-auto bg-red-500 px-2 py-1 rounded text-white";
+    deleteButton.className = "ml-auto bg-red-500 px-2 py-1 rounded text-white z-10";
     deleteButton.innerText = "Delete";
     deleteButton.onclick = (event) => {
       event.stopPropagation();
